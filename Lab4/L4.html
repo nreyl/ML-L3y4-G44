@@ -7811,6 +7811,17 @@ a.anchor-link {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fuente01">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Fuente de los datos. Las imágenes y sus máscaras de referencia son una selección de 20 imágenes dermatoscópicas del conjunto ISIC 2016, tarea de segmentación de lesiones: <a href="https://challenge.isic-archive.com/landing/2016/37/">https://challenge.isic-archive.com/landing/2016/37/</a>. Las máscaras de referencia fueron elaboradas por especialistas. Vienen con valores 0 y 255 y las convertimos a 0 y 1. Al reducir las imágenes a 128×128 redimensionamos también las máscaras con interpolación por vecino más cercano, para conservar los valores binarios.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=68084891">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7826,7 +7837,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
@@ -7867,7 +7878,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [77]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ImagenAPixeles</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
@@ -7932,7 +7943,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ruta_imagenes</span> <span class="o">=</span> <span class="s2">"./ISBI2016_ISIC_Part1_Training_Data"</span>
@@ -8003,7 +8014,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Particion definida en el enunciado (no por orden de archivo)</span>
@@ -8065,7 +8076,7 @@ Prueba: ISIC_0000087, ISIC_0000105, ISIC_0000110, ISIC_0000123, ISIC_0000128
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Comprobacion de formas y rangos</span>
@@ -8133,7 +8144,7 @@ Fracción de lesión por imagen (ajuste): [0.13 0.23 0.12 0.06 0.19 0.03 0.36 0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -8183,7 +8194,7 @@ Fracción de lesión por imagen (ajuste): [0.13 0.23 0.12 0.06 0.19 0.03 0.36 0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [82]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Parametros reproducibles</span>
@@ -8247,7 +8258,7 @@ Fracción de lesión por imagen (ajuste): [0.13 0.23 0.12 0.06 0.19 0.03 0.36 0.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [83]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">agrupar_imagen</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">k_rango</span><span class="o">=</span><span class="n">K_RANGO</span><span class="p">):</span>
@@ -8325,7 +8336,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [84]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">nombres_comb</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">[</span><span class="s2">"nombre"</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">COMBINACIONES</span><span class="p">]</span>
@@ -8764,7 +8775,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -8814,7 +8825,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">MARGEN</span> <span class="o">=</span> <span class="mf">0.10</span>
@@ -8930,7 +8941,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mascara_criterio_a</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">etq</span><span class="p">,</span> <span class="n">umbral_a</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">contraste_min</span><span class="o">=</span><span class="mf">0.08</span><span class="p">):</span>
@@ -8977,7 +8988,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">iou</span><span class="p">(</span><span class="n">est</span><span class="p">,</span> <span class="n">ref</span><span class="p">):</span>
@@ -9082,7 +9093,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">iou_comp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">n</span><span class="p">:</span> <span class="n">res_criterios</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">CRITERIOS</span><span class="p">})</span>
@@ -9138,7 +9149,7 @@ Imagen 15/15 (ISIC_0000112) lista
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Criterio A, umbral relativo de contraste:"</span><span class="p">)</span>
@@ -9191,7 +9202,7 @@ Criterio B, umbral de razón de borde:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -9258,7 +9269,7 @@ Criterio B, umbral de razón de borde:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">v_measure_score</span><span class="p">,</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span>
@@ -9521,7 +9532,7 @@ Criterio B, umbral de razón de borde:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [93]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">pivot</span> <span class="o">=</span> <span class="p">(</span><span class="n">df_ajuste</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">"combinacion"</span><span class="p">,</span> <span class="s2">"criterio"</span><span class="p">])[</span><span class="s2">"dice"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -9578,7 +9589,7 @@ Criterio B, umbral de razón de borde:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [64]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [94]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">mejor</span> <span class="o">=</span> <span class="n">resumen_ajuste</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -9818,7 +9829,7 @@ Criterio B, umbral de razón de borde:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [95]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">nombre_a_j</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="p">[</span><span class="s2">"nombre"</span><span class="p">]:</span> <span class="n">j</span> <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">COMBINACIONES</span><span class="p">)}</span>
@@ -9895,7 +9906,7 @@ Criterio B, umbral de razón de borde:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [96]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">resumen_ajuste</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -9957,7 +9968,7 @@ Dice promedio (ajuste): 0.861 | V-measure promedio (ajuste): 0.526
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [97]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">filas_prueba</span> <span class="o">=</span> <span class="p">[]</span>
@@ -10095,7 +10106,7 @@ Dice promedio (ajuste): 0.861 | V-measure promedio (ajuste): 0.526
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [98]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">dice_ajuste_final</span> <span class="o">=</span> <span class="n">df_ajuste</span><span class="p">[(</span><span class="n">df_ajuste</span><span class="o">.</span><span class="n">criterio</span> <span class="o">==</span> <span class="n">CONFIG_FINAL</span><span class="p">[</span><span class="s2">"criterio"</span><span class="p">])</span> <span class="o">&amp;</span>
@@ -10145,7 +10156,7 @@ Dice promedio prueba (5 imágenes):  0.730
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [99]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nombres_prueba</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mf">3.2</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">nombres_prueba</span><span class="p">)))</span>
@@ -10182,7 +10193,7 @@ Dice promedio prueba (5 imágenes):  0.730
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [100]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Evidencia para el análisis: efecto de la posición (criterio fijo: A)</span>
@@ -10386,7 +10397,7 @@ Imágenes sin cambio relevante (|dif| &lt;= 0.01): 9
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [101]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Evidencia para el análisis: relación entre K, silueta y Dice</span>
@@ -10432,7 +10443,7 @@ Mayor Dice promedio:    λ/β = 0.5 (A: contraste de color) -&gt; silueta 0.493,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [102]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Evidencia para el análisis: falsos positivos y falsos negativos en prueba</span>
@@ -10532,6 +10543,137 @@ Mayor Dice promedio:    λ/β = 0.5 (A: contraste de color) -&gt; silueta 0.493,
 </div>
 </div>
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=diag0110">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [103]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Evidencia para la limitación 1: por qué el criterio A no selecciona la lesión de ISIC_0000110</span>
+<span class="n">nombre_110</span> <span class="o">=</span> <span class="s2">"ISIC_0000110"</span>
+<span class="n">k110</span> <span class="o">=</span> <span class="n">resultados_prueba</span><span class="p">[</span><span class="n">nombre_110</span><span class="p">][</span><span class="s2">"k_opt"</span><span class="p">]</span>
+<span class="n">etq110</span> <span class="o">=</span> <span class="n">resultados_prueba</span><span class="p">[</span><span class="n">nombre_110</span><span class="p">][</span><span class="s2">"etiquetas"</span><span class="p">][</span><span class="n">k110</span><span class="p">]</span>
+<span class="n">img110</span> <span class="o">=</span> <span class="n">imgs_prueba</span><span class="p">[</span><span class="n">nombres_prueba</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">nombre_110</span><span class="p">)]</span>
+<span class="n">ref110</span> <span class="o">=</span> <span class="n">masks_prueba</span><span class="p">[</span><span class="n">nombres_prueba</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">nombre_110</span><span class="p">)]</span>
+
+<span class="n">f110</span> <span class="o">=</span> <span class="n">caracteristicas_grupos</span><span class="p">(</span><span class="n">img110</span><span class="p">,</span> <span class="n">etq110</span><span class="p">)</span>
+<span class="c1"># Solo como diagnóstico posterior, sin modificar el método: qué parte de cada grupo cae dentro de la lesión de referencia</span>
+<span class="n">f110</span><span class="p">[</span><span class="s2">"</span><span class="si">% e</span><span class="s2">n lesión (ref)"</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">ref110</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="n">etq110</span> <span class="o">==</span> <span class="n">g</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">f110</span><span class="o">.</span><span class="n">index</span><span class="p">]</span>
+<span class="n">umbral_rel</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">f110</span><span class="p">[</span><span class="s2">"contraste"</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">f110</span><span class="p">[</span><span class="s2">"seleccionado"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">f110</span><span class="p">[</span><span class="s2">"contraste"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">umbral_rel</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">f110</span><span class="p">[</span><span class="s2">"contraste"</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mf">0.08</span><span class="p">)</span>
+<span class="n">f110</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">f110</span><span class="p">[</span><span class="s2">"contraste"</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">(),</span> <span class="s2">"seleccionado"</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">display</span><span class="p">(</span><span class="n">f110</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"K = </span><span class="si">{</span><span class="n">k110</span><span class="si">}</span><span class="s2"> | contraste máximo: </span><span class="si">{</span><span class="n">f110</span><span class="p">[</span><span class="s1">'contraste'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> | umbral relativo, 0.5 × máximo: </span><span class="si">{</span><span class="n">umbral_rel</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>tamano</th>
+<th>contraste</th>
+<th>razon_borde</th>
+<th>% en lesión (ref)</th>
+<th>seleccionado</th>
+</tr>
+<tr>
+<th>grupo</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>0.217</td>
+<td>0.016</td>
+<td>1.102</td>
+<td>3.2</td>
+<td>False</td>
+</tr>
+<tr>
+<th>1</th>
+<td>0.227</td>
+<td>0.036</td>
+<td>1.069</td>
+<td>2.6</td>
+<td>False</td>
+</tr>
+<tr>
+<th>2</th>
+<td>0.234</td>
+<td>0.056</td>
+<td>0.930</td>
+<td>4.2</td>
+<td>False</td>
+</tr>
+<tr>
+<th>3</th>
+<td>0.015</td>
+<td>0.812</td>
+<td>2.740</td>
+<td>0.0</td>
+<td>True</td>
+</tr>
+<tr>
+<th>4</th>
+<td>0.086</td>
+<td>0.325</td>
+<td>0.329</td>
+<td>87.9</td>
+<td>False</td>
+</tr>
+<tr>
+<th>5</th>
+<td>0.221</td>
+<td>0.077</td>
+<td>1.050</td>
+<td>3.1</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>K = 6 | contraste máximo: 0.812 | umbral relativo, 0.5 × máximo: 0.406
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7645fd4c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -10547,7 +10689,7 @@ Mayor Dice promedio:    λ/β = 0.5 (A: contraste de color) -&gt; silueta 0.493,
 <h3 id="3.-%C2%BFC%C3%B3mo-se-comparan-los-resultados-de-ajuste-y-prueba?-%C2%BFPor-qu%C3%A9-es-importante-no-modificar-el-m%C3%A9todo-despu%C3%A9s-de-consultar-las-m%C3%A1scaras-de-prueba?">3. ¿Cómo se comparan los resultados de ajuste y prueba? ¿Por qué es importante no modificar el método después de consultar las máscaras de prueba?<a class="anchor-link" href="#3.-%C2%BFC%C3%B3mo-se-comparan-los-resultados-de-ajuste-y-prueba?-%C2%BFPor-qu%C3%A9-es-importante-no-modificar-el-m%C3%A9todo-despu%C3%A9s-de-consultar-las-m%C3%A1scaras-de-prueba?">¶</a></h3><p>El Dice promedio baja de 0,861 en ajuste a 0,730 en prueba. Casi toda la caída viene de ISIC_0000110, que tiene Dice 0,000. Las otras cuatro imágenes de prueba tienen Dice entre 0,882 y 0,937, con promedio 0,913, incluso mejor que en ajuste. En ajuste ninguna imagen bajó de 0,740, así que ISIC_0000110 es un tipo de falla que el ajuste no mostró.</p>
 <p>El valor de ajuste es una estimación optimista, porque la configuración se eligió como la mejor de 20 sobre esas mismas 15 imágenes. Además, con solo 5 imágenes de prueba, una sola pesa el 20 % del promedio. No se puede concluir que el método empeora en promedio, pero sí que puede fallar por completo en casos nuevos.</p>
 <p>No se debe modificar el método tras ver las máscaras de prueba, porque esas imágenes pasarían a ser parte del ajuste. El Dice dejaría de estimar el desempeño con imágenes nuevas y quedaría inflado sin que lo notemos. Además, el cambio estaría diseñado para arreglar una imagen concreta y no el problema general. Por eso el resultado se reporta tal cual y la falla se analiza como limitación.</p>
-<h3 id="4.-Identifiquen-dos-limitaciones-de-su-modelo-y-expliquen-sus-posibles-causas-a-partir-de-las-im%C3%A1genes-y-de-la-representaci%C3%B3n-RGB-+-posici%C3%B3n.">4. Identifiquen dos limitaciones de su modelo y expliquen sus posibles causas a partir de las imágenes y de la representación RGB + posición.<a class="anchor-link" href="#4.-Identifiquen-dos-limitaciones-de-su-modelo-y-expliquen-sus-posibles-causas-a-partir-de-las-im%C3%A1genes-y-de-la-representaci%C3%B3n-RGB-+-posici%C3%B3n.">¶</a></h3><p>Limitación 1: bajo contraste y viñeteado. En ISIC_0000110 la lesión ocupa el 10,5 % de la imagen, pero la máscara estimada solo el 1,5 %, y corresponde a las esquinas oscuras del viñeteado. K-medias sí aisló la lesión en un grupo central, con K = 6 y color morado en la figura, así que el fallo está en la selección de grupos. El criterio A usa un umbral relativo al contraste máximo. Como las esquinas contrastan mucho con la piel, la lesión, pálida y de color cercano al de la piel, probablemente queda por debajo de la mitad de ese máximo y no se selecciona. Se puede comprobar aplicando caracteristicas_grupos a esa imagen.</p>
+<h3 id="4.-Identifiquen-dos-limitaciones-de-su-modelo-y-expliquen-sus-posibles-causas-a-partir-de-las-im%C3%A1genes-y-de-la-representaci%C3%B3n-RGB-+-posici%C3%B3n.">4. Identifiquen dos limitaciones de su modelo y expliquen sus posibles causas a partir de las imágenes y de la representación RGB + posición.<a class="anchor-link" href="#4.-Identifiquen-dos-limitaciones-de-su-modelo-y-expliquen-sus-posibles-causas-a-partir-de-las-im%C3%A1genes-y-de-la-representaci%C3%B3n-RGB-+-posici%C3%B3n.">¶</a></h3><p>Limitación 1: bajo contraste y viñeteado. En ISIC_0000110 la lesión ocupa el 10,5 % de la imagen, pero la máscara estimada solo el 1,5 %, y corresponde a las esquinas oscuras del viñeteado. K-medias sí aisló la lesión en un grupo central, con K = 6 y color morado en la figura, así que el fallo está en la selección de grupos. El criterio A usa un umbral relativo al contraste máximo, y la celda de evidencia anterior muestra qué pasa con los seis grupos. El grupo 3 son las esquinas del viñeteado: ocupa el 1,5 % de la imagen, tiene contraste de 0,812, razón de borde de 2,74 y ningún píxel dentro de la lesión. El grupo 4 es la lesión: el 87,9 % de sus píxeles cae dentro de la máscara de referencia, ocupa el 8,6 % de la imagen y tiene contraste de 0,325 y razón de borde de 0,329. El criterio A exige al menos la mitad del contraste máximo, que es 0,406, y la lesión, pálida y de color cercano al de la piel, queda en 0,325, así que no se selecciona, mientras que las esquinas sí. El criterio B, que usa la ubicación, sí habría elegido el grupo 4, pero no cambiamos la configuración después de ver las imágenes de prueba, porque el protocolo no lo permite.</p>
 <p>Limitación 2: lesiones heterogéneas, de borde gradual o grandes. K-medias forma grupos compactos, pero las lesiones reales son irregulares y de color no uniforme. En ISIC_0000105, con K = 6, la lesión se reparte en un núcleo rojo y un anillo morado, que el criterio A recoge. El falso positivo es una mancha roja pequeña de la piel que comparte grupo con el anillo por tener un color parecido. El color RGB no distingue estructuras distintas con tono similar.</p>
 <h3 id="5.-En-el-contexto-de-DermAlpes,-%C2%BFqu%C3%A9-consecuencias-podr%C3%ADan-tener-los-falsos-positivos-y-falsos-negativos?-%C2%BFQu%C3%A9-sesgos-y-problemas-de-generalizaci%C3%B3n-deben-considerarse-antes-de-utilizar-el-m%C3%A9todo-con-nuevas-poblaciones-o-condiciones-de-adquisici%C3%B3n?">5. En el contexto de DermAlpes, ¿qué consecuencias podrían tener los falsos positivos y falsos negativos? ¿Qué sesgos y problemas de generalización deben considerarse antes de utilizar el método con nuevas poblaciones o condiciones de adquisición?<a class="anchor-link" href="#5.-En-el-contexto-de-DermAlpes,-%C2%BFqu%C3%A9-consecuencias-podr%C3%ADan-tener-los-falsos-positivos-y-falsos-negativos?-%C2%BFQu%C3%A9-sesgos-y-problemas-de-generalizaci%C3%B3n-deben-considerarse-antes-de-utilizar-el-m%C3%A9todo-con-nuevas-poblaciones-o-condiciones-de-adquisici%C3%B3n?">¶</a></h3><p>Los falsos negativos son los más graves porque son silenciosos. Una máscara que subestima la lesión reduce el área y el diámetro medidos, puede ocultar bordes irregulares y hace que el dermatólogo, que mira la región resaltada, ignore parte de la lesión. En un centro pequeño sin segunda opinión local, esto puede retrasar una derivación o un seguimiento. En ISIC_0000110, el 10,5 % de la imagen era lesión y quedó sin cubrir.</p>
 <p>Los falsos positivos sobrestiman el tamaño y pueden empujar una medida por encima de un umbral de decisión, generando derivaciones innecesarias. También distraen al especialista y le hacen perder tiempo, lo contrario del objetivo de la herramienta. Suelen notarse más fácilmente a simple vista. Para mitigar ambos, la máscara debe mostrarse solo como superposición sobre la imagen original, con la posibilidad de que el dermatólogo la corrija o la rechace, y con alertas cuando toque el borde o sea muy pequeña. Además, para medir en milímetros se necesita la escala del dermatoscopio, que se pierde al reducir las imágenes.</p>
@@ -10566,10 +10708,10 @@ Mayor Dice promedio:    λ/β = 0.5 (A: contraste de color) -&gt; silueta 0.493,
 <h2 id="Uso-de-herramientas-de-IA-generativa">Uso de herramientas de IA generativa<a class="anchor-link" href="#Uso-de-herramientas-de-IA-generativa">¶</a></h2><h3 id="1.-Declaraci%C3%B3n-del-uso">1. Declaración del uso<a class="anchor-link" href="#1.-Declaraci%C3%B3n-del-uso">¶</a></h3><p>Usamos la IA generativa de dos maneras distintas.</p>
 <p>Claude Code, con el modelo Claude Sonnet 5.5, nos apoyó durante el desarrollo. Leyó el enunciado, la rúbrica y el notebook para señalar qué pedían los puntos 4 y 5 y qué nos faltaba. Sugirió prompts para pedir ayuda puntual. Escribió la celda 2.2, que prueba la recomendación de la IAG sobre las imágenes de ajuste, y ayudó a redactar esta sección. Es ayuda conceptual, revisión y generación de código de verificación.</p>
 <p>Para la actividad de verificación lanzamos desde Claude Code un agente Claude nuevo, sin acceso al notebook ni a los datos, y le hicimos cuatro consultas seguidas. Le pedimos que respondiera solo con texto.</p>
-<h3 id="2.-Actividad-de-verificaci%C3%B3n:-recomendaci%C3%B3n-de-una-IAG-antes-de-elegir-la-configuraci%C3%B3n-final">2. Actividad de verificación: recomendación de una IAG antes de elegir la configuración final<a class="anchor-link" href="#2.-Actividad-de-verificaci%C3%B3n:-recomendaci%C3%B3n-de-una-IAG-antes-de-elegir-la-configuraci%C3%B3n-final">¶</a></h3><h4 id="2.1-Prompts-y-respuestas">2.1 Prompts y respuestas<a class="anchor-link" href="#2.1-Prompts-y-respuestas">¶</a></h4><p>La consulta describió las imágenes, es decir, una lesión oscura y central sobre piel clara, esquinas oscuras por el viñeteado y algunos pelos, sin anexar ninguna y sin nombrar el conjunto de datos. Los cuatro prompts y las cuatro respuestas, textuales, están en el archivo <code>historial_IAG.md</code>, que se adjunta a la entrega.</p>
+<h3 id="2.-Actividad-de-verificaci%C3%B3n:-recomendaci%C3%B3n-de-una-IAG-antes-de-elegir-la-configuraci%C3%B3n-final">2. Actividad de verificación: recomendación de una IAG antes de elegir la configuración final<a class="anchor-link" href="#2.-Actividad-de-verificaci%C3%B3n:-recomendaci%C3%B3n-de-una-IAG-antes-de-elegir-la-configuraci%C3%B3n-final">¶</a></h3><h4 id="2.1-Prompts-y-respuestas">2.1 Prompts y respuestas<a class="anchor-link" href="#2.1-Prompts-y-respuestas">¶</a></h4><p>La consulta describió las imágenes, es decir, una lesión oscura y central sobre piel clara, esquinas oscuras por el viñeteado y algunos pelos, sin anexar ninguna y sin nombrar el conjunto de datos. Los cuatro prompts y las cuatro respuestas, textuales, están en el archivo historial_IAG.md, que se adjunta a la entrega.</p>
 <p>Los prompts fueron estos:</p>
 <ol>
-<li>El inicial describe las imágenes y la representación <code>[β·R, β·G, β·B, λ·x, λ·y]</code>, y pregunta qué β, λ y K usar y cómo decidir qué grupos son la lesión.</li>
+<li>El inicial describe las imágenes y la representación [β·R, β·G, β·B, λ·x, λ·y], y pregunta qué β, λ y K usar y cómo decidir qué grupos son la lesión.</li>
 <li>El segundo pide valores numéricos de β y λ, una regla única para K, umbrales concretos y la forma exacta de calcular cada característica de los grupos.</li>
 <li>El tercero pregunta qué pasa si la lesión es pálida o si las esquinas del viñeteado contrastan más que la lesión.</li>
 <li>El cuarto pregunta qué tan segura está de los valores sin haber visto las imágenes y qué habría que medir para comprobarlos.</li>
@@ -10577,7 +10719,7 @@ Mayor Dice promedio:    λ/β = 0.5 (A: contraste de color) -&gt; silueta 0.493,
 <p>La recomendación concreta, en la respuesta 2, fue esta. Usar β = 1 y λ = 0.25, es decir una razón λ/β de 0.25. Elegir K con la silueta entre 2 y 6, sobre una muestra de 5000 píxeles y con n_init = 10, tomando el K más pequeño cuya silueta llegue al menos al 95 % de la máxima. Antes de agrupar, quitar los pelos con un black-hat de 11×11 y umbral 10, rellenarlos y suavizar con una gaussiana de σ = 1.5, y excluir las esquinas oscuras, que son las de luminancia menor que 0.15 conectadas al borde.</p>
 <p>Para cada grupo, tomar su mayor componente conexo y calcular el contraste con la piel, que es la mediana de la luminancia del borde menos la luminancia media del grupo, la fracción del perímetro de la imagen que toca, la distancia normalizada al centro y el tamaño. Un grupo es candidato si el contraste es al menos 0.08, el borde a lo sumo 0.15, la distancia a lo sumo 0.45 y el tamaño está entre 0.03 y 0.70. La lesión es el candidato de mayor contraste, más los candidatos con contraste de al menos 0.6 veces el máximo que estén en contacto con él. Después vienen la apertura con radio 3, el cierre con radio 7, el relleno de huecos y el componente conexo mayor. Si no hay candidatos, usa Otsu y, como último recurso, un círculo central.</p>
 <p>En las respuestas 3 y 4 la IAG avisó de tres cosas: una lesión pálida rompería su criterio de contraste, los números eran "valores iniciales razonables" sin calibrar con nuestras imágenes, y la silueta "no mide si la segmentación es correcta".</p>
-<h4 id="2.2-Prueba-de-la-recomendaci%C3%B3n-sobre-las-im%C3%A1genes-de-ajuste">2.2 Prueba de la recomendación sobre las imágenes de ajuste<a class="anchor-link" href="#2.2-Prueba-de-la-recomendaci%C3%B3n-sobre-las-im%C3%A1genes-de-ajuste">¶</a></h4><p>La celda siguiente aplica la recomendación tal como la dio la IAG a las 15 imágenes de ajuste. No usa las de prueba ni sus máscaras, y las máscaras de referencia solo sirven para calcular el Dice. Hay una desviación: OpenCV no está instalado, así que el inpainting de los pelos con <code>cv2.inpaint</code> lo sustituimos por un relleno con filtro de mediana. Al final hay una ablación para ver qué parte de la recomendación explica el resultado.</p>
+<h4 id="2.2-Prueba-de-la-recomendaci%C3%B3n-sobre-las-im%C3%A1genes-de-ajuste">2.2 Prueba de la recomendación sobre las imágenes de ajuste<a class="anchor-link" href="#2.2-Prueba-de-la-recomendaci%C3%B3n-sobre-las-im%C3%A1genes-de-ajuste">¶</a></h4><p>La celda siguiente aplica la recomendación tal como la dio la IAG a las 15 imágenes de ajuste. No usa las de prueba ni sus máscaras, y las máscaras de referencia solo sirven para calcular el Dice. Hay una desviación: OpenCV no está instalado, así que el inpainting de los pelos con cv2.inpaint lo sustituimos por un relleno con filtro de mediana. Al final hay una ablación para ver qué parte de la recomendación explica el resultado.</p>
 </div>
 </div>
 </div>
@@ -10586,7 +10728,7 @@ Mayor Dice promedio:    λ/β = 0.5 (A: contraste de color) -&gt; silueta 0.493,
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [104]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Prueba de la recomendación de la IAG sobre las 15 imágenes de ajuste (no se usan las de prueba)</span>
@@ -11028,7 +11170,7 @@ No vio las imágenes ni las máscaras, y el Dice depende de cómo los dermatólo
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [105]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Bono A. PCA sobre una muestra de píxeles de una imagen de ajuste</span>
@@ -11256,7 +11398,7 @@ Varianza explicada por PC1 y PC2: [0.407 0.355] | acumulada: 0.762
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [106]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Bono B. Mean shift frente a K-medias sobre la misma imagen y la misma representación</span>
@@ -11372,28 +11514,28 @@ Varianza explicada por PC1 y PC2: [0.407 0.355] | acumulada: 0.762
 <td>NaN</td>
 <td>5</td>
 <td>0.743</td>
-<td>0.043</td>
+<td>0.047</td>
 </tr>
 <tr>
 <th>Mean shift, ancho mitad</th>
 <td>0.101</td>
 <td>19</td>
 <td>0.726</td>
-<td>0.909</td>
+<td>0.731</td>
 </tr>
 <tr>
 <th>Mean shift, ancho estimado</th>
 <td>0.202</td>
 <td>5</td>
 <td>0.725</td>
-<td>0.273</td>
+<td>0.362</td>
 </tr>
 <tr>
 <th>Mean shift, ancho doble</th>
 <td>0.404</td>
 <td>1</td>
 <td>0.061</td>
-<td>0.035</td>
+<td>0.036</td>
 </tr>
 </tbody>
 </table>
